@@ -23,37 +23,37 @@ Please consider estimation in MD (man days), but please take on mind I need to s
 Please also take on mind that I will be delivering the solution piece-by-piece, meaning some code that was created still could be changed a bit. I will use versioned branches for that.
 I will also provide updates in this DOC.
 
-## 1. App structure - 3.5 MD
+1. App structure - 3.5 MD
 
-1.1. Optimize file structure
-1.2. Setup docker compose for local dev
-1.3. Setup API express framework
-1.4. Prepare seed script
-1.5. Prepare basic CI/CD
-1.6. Add API auth
-1.7. Handle CSRF
-1.8. Prepare basic DOC
+-   Optimize file structure
+-   Setup docker compose for local dev
+-   Setup API express framework
+-   Prepare seed script
+-   Prepare basic CI/CD
+-   Add API auth
+-   Handle CSRF
+-   Prepare basic DOC
 
-## 2. API Endpoints - 1.5 MD
+2. API Endpoints - 1.5 MD
 
-2.1. Upload
-2.2. Extend upload for multiple files
-2.3. Handle max size
+-   Upload
+-   Extend upload for multiple files
+-   Handle max size
 
-## 3. API memory leak - 0.5 MD
+3. API memory leak - 0.5 MD
 
-3.1. Verify session storage. Propose solution
+-   Verify session storage. Propose solution
 
-## 4. Tests - 1 MD
+4. Tests - 1 MD
 
-4.1. Example unit tests
+-   Example unit tests
 
-## 5. DOCs, fixes - 1 MD
+5. DOCs, fixes - 1 MD
 
-5.1. Extend docs
-5.2. Post fixes
+-   Extend docs
+-   Post fixes
 
-## 6. FE APP - TBE (To Be Estimated)
+6. FE APP - TBE (To Be Estimated)
 
 In case it will go faster that expected I will make a simple React APP for FE tasks
 
