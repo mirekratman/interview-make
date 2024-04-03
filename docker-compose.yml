@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+    cat-db:
+        platform: linux/amd64
+        container_name: cat-db
+        image: postgres:16.2
+        environment:
+            POSTGRES_USER: "cat_admin"
+            POSTGRES_PASSWORD: "cat_pass"
+            POSTGRES_DB: "postgres"
+        ports:
+            - "5432:5432"
+        networks:
+            backend:
+    # INFO - we can add restart option if needed
+    #    restart: unless-stopped
+    # INFO - we can add extra confiog for healt checks, etc
+    #    healthcheck:
+    #        test: ["CMD-SHELL", "pg_isready -U cat_admin"]
+    #        interval: 10s
+    #        timeout: 5s
+    #        retries: 5
+
+    # INFO - as development ENV works better on local OS I commented out the docker config for the backend and frontend
+    # This could be enabled to have app working fully as containerized app
+    #cat-backend:
+    #    platform: linux/amd64
+    #    container_name: cat-backend
+    #    image: node:21-alpine
+    #    ports:
+    #        - "5000:5000"
+    #    networks:
+    #        - backend
+
+    #cat-frontend:
+    #    platform: linux/amd64
+    #    container_name: cat-frontend
+    #    image: node:21-alpine
+    #    ports:
+    #        - "3000:3000"
+    #    networks:
+    #        - backend
+
+networks:
+    frontend:
+        driver: bridge
+    backend:
+        driver: bridge
