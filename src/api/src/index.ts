@@ -15,20 +15,20 @@ app.set('trust proxy', 1);
 
 // TODO configure session properly
 app.use(
-	// TODO memory leak ?
-	session({
-		secret: 'keyboard cat',
-		resave: true,
-		saveUninitialized: true,
-		cookie: { secure: true },
-	})
+    // TODO memory leak ?
+    session({
+        secret: 'keyboard cat',
+        resave: true,
+        saveUninitialized: true,
+        cookie: { secure: true },
+    })
 );
 
-// handle routes
+// Handle routes
 app.use('/', indexRoutes);
 app.use('/api', apiRoutes);
 
-// establish server
+// Establish server
 app.listen(appPort, () => {
-	console.log(`Server is running on port ${appPort}`);
+    console.log(`Server is running on port ${appPort}`);
 });
