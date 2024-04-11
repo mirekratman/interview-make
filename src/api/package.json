@@ -1,23 +1,29 @@
 {
     "name": "test-monolith",
     "version": "0.1.0",
-    "license": "UNLICENSED",
+    "license": "© Copyright Miroslaw Ratman 2024, all rights reserved",
     "scripts": {
-        "dev": "NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register src/index.ts",
-        "build": "NODE_ENV=production tsc --build",
-        "seed": "node -r dotenv/config seed/index dotenv_config_path=./.env"
+        "seed": "NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register seed/index.ts",
+        "dev": "nodemon --exec 'NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register' src/index.ts",
+        "build": "NODE_ENV=production tsc --build"
     },
     "private": true,
     "dependencies": {
+        "@make/shared": "file:../shared",
         "@types/express": "^4.17.13",
         "@types/express-session": "^1.18.0",
+        "body-parser": "^1.20.2",
         "dotenv": "^16.4.5",
         "express": "^4.19.2",
         "express-session": "^1.18.0",
+        "node-json-db": "^2.3.0",
         "pg": "^8.11.5",
-        "pg-native": "^3.0.1"
+        "uuid4": "^2.0.3"
     },
     "devDependencies": {
+        "@types/pg": "^8.11.5",
+        "@types/uuid4": "^2.0.3",
+        "nodemon": "^3.1.0",
         "ts-node": "^10.9.2",
         "tsconfig-paths": "^4.2.0",
         "typescript": "^5.4.3"
