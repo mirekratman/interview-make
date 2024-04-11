@@ -1,0 +1,15 @@
+{
+    "name": "@make/shared",
+    "private": true,
+    "version": "1.0.0",
+    "main": "src/index.ts",
+    "description": "Shared libs for Make projects",
+    "license": "© Copyright Miroslaw Ratman 2024, all rights reserved",
+    "repository": "",
+    "scripts": {
+        "build": "NODE_ENV=production tsc --build"
+    },
+    "dependencies": {
+        "typescript": "^5.4.3"
+    }
+}
