@@ -97,6 +97,20 @@ In progress
 -   extending API functionality
 -   documentation
 
+## 11.04.2024
+
+Done
+
+-   cats API endpoints
+-   simple JSON storage
+-   JSON seed
+-   separated repo for interfaces (mainly as a example how to separate some code that could be used between many apps. In this case module shared between BE an FE)
+
+In progress
+
+-   finishing points from "Normal Mode" (uploads + limits + auth)
+-   documentation
+
 # Usage
 
 ## Local development
