@@ -1,17 +1,17 @@
 {
-	"compilerOptions": {
-		"target": "ES2018",
-		"module": "commonjs",
-		"outDir": "../../dist/api",
-		"paths": {
-			"*": ["./src/*"]
-		},
-		"strict": true,
-		"resolveJsonModule": true,
-		"esModuleInterop": true,
-		"sourceMap": true,
-		"removeComments": true
-	},
-	"include": ["src/**/*.ts"],
-	"exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "ES2018",
+        "module": "commonjs",
+        "outDir": "../../dist/api",
+        "paths": {
+            "*": ["./seed/*", "./src/*"]
+        },
+        "strict": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "sourceMap": true,
+        "removeComments": true
+    },
+    "include": ["seed/**/*.ts", "src/**/*.ts", "src/declarations.d.ts"],
+    "exclude": ["node_modules"]
 }
