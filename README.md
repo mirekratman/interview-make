@@ -111,6 +111,25 @@ In progress
 -   finishing points from "Normal Mode" (uploads + limits + auth)
 -   documentation
 
+## 17.04.2024
+
+Done
+
+-   authentication using JWT
+-   added 10M limit for formdata upload
+-   added multiple file upload
+-   suggested solution for high load during upload
+-   added example tests
+-   Extended documentation
+
+In progress
+
+-   issue with SQL seed - please see my comment in /src/api/sseed/sql/sql.ts file
+
+ToDo
+
+-   Your opinion ;)
+
 # Usage
 
 ## Local development
@@ -124,6 +143,23 @@ ATTENTION !!!
 Local development can be instanced using Makefile file. This could be used on linux based OS.
 For Windows users to run MAKE command please install for example https://www.cygwin.com/
 
+# Improvements
+
+Some suggestions for improvements
+
+-   better session storage to avoid memory leaks (more info in code)
+-   consider/test some extra configuration for mutler to handle higher workload (more info in code)
+-   add more test (just added one test as a example)
+-   consider test:coverage option
+-   some code could be written a bit more nicely - for example handle authentication in separate handler (more info in code)
+-   docker compose contain only config for DB - frontend need additional config, but without deeper specification its hard to set it up, thats its commented
+-   depending on server/cloud config, maybe will be necessary to move configs in to Dockerfile for every instance (BE/FE)
+
+Additionally:
+
+-   some example of deployment to versem is provided in Makefile
+-   I'm struggling with "Connection terminated unexpectedly" when it comes to SQL seeding. Still trying to resolve it but the functionality is correct. More info in code.
+
 ### Starting local dev
 
 ```
@@ -135,5 +171,8 @@ You can call some methods separately using for example:
 ```
 make stop
 make init
+make test
 etc...
 ```
+
+All commands from make can be executed manually in CLI
