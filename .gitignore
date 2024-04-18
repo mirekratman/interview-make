@@ -2,6 +2,7 @@
 
 # ENV
 .env
+.vercel
 
 # compiled output
 /dist

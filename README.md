@@ -84,3 +84,42 @@ In progress
 
 -   basic monolith config
 -   extending API config
+
+## 2.04.2024
+
+Done
+
+-   extend API structure
+-   API CLI for local development and examples of simple deployment
+
+In progress
+
+-   extending API functionality
+-   documentation
+
+# Usage
+
+## Local development
+
+To run properly development env you need to have installed in your system globally:
+
+-   docker (https://docs.docker.com/engine/install/)
+-   yarn (https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable)
+
+ATTENTION !!!
+Local development can be instanced using Makefile file. This could be used on linux based OS.
+For Windows users to run MAKE command please install for example https://www.cygwin.com/
+
+### Starting local dev
+
+```
+make
+```
+
+You can call some methods separately using for example:
+
+```
+make stop
+make init
+etc...
+```
