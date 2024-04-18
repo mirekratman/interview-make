@@ -29,6 +29,10 @@ lint:
 
 reset: nuke init start
 
+test:
+# TODO network-timeout could be necessary for slow connections
+	(cd src/api && yarn install --frozen-lockfile --network-timeout 1000000000 && yarn test && yarn test:coverage)
+
 
 # DEPLOYMENT
 
