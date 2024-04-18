@@ -3,7 +3,7 @@
  */
 export interface Cat {
     id: string;
-    image: string;
+    images: string[];
     title: string;
     date: Date;
     rating: number;
