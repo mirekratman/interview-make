@@ -155,6 +155,7 @@ Some suggestions for improvements
 -   docker compose contain only config for DB - frontend need additional config, but without deeper specification its hard to set it up, thats its commented
 -   depending on server/cloud config, maybe will be necessary to move configs in to Dockerfile for every instance (BE/FE)
 -   extend config for cors - depending on project requirements
+-   extend/change config for eslint depending on project
 
 Additionally:
 
