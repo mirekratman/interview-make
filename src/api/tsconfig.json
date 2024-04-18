@@ -3,6 +3,7 @@
         "target": "ES2018",
         "module": "commonjs",
         "outDir": "../../dist/api",
+        "types": ["node"],
         "paths": {
             "*": ["./seed/*", "./src/*"]
         },
@@ -12,6 +13,13 @@
         "sourceMap": true,
         "removeComments": true
     },
-    "include": ["seed/**/*.ts", "src/**/*.ts", "src/declarations.d.ts"],
+    "include": [
+        "seed/**/*.ts",
+        "src/**/*.ts",
+        "src/declarations.d.ts",
+        "seed/index.ts",
+        "seed/sql/sql.ts",
+        "seed/json/json.js"
+    ],
     "exclude": ["node_modules"]
 }
