@@ -1,7 +1,8 @@
 {
     "compilerOptions": {
-        "target": "ES2018",
-        "module": "commonjs",
+        "target": "es6",
+        "module": "Node16",
+        "moduleResolution": "node",
         "outDir": "../../dist/api",
         "types": ["node"],
         "paths": {
@@ -10,16 +11,10 @@
         "strict": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "skipLibCheck": true,
         "sourceMap": true,
         "removeComments": true
     },
-    "include": [
-        "seed/**/*.ts",
-        "src/**/*.ts",
-        "src/declarations.d.ts",
-        "seed/index.ts",
-        "seed/sql/sql.ts",
-        "seed/json/json.js"
-    ],
+    "include": ["seed/**/*.ts", "src/**/*.ts", "src/declarations.d.ts"],
     "exclude": ["node_modules"]
 }
