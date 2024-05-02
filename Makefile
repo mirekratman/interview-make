@@ -12,9 +12,7 @@ nuke:
 init:
 # TODO network-timeout could be necessary for slow connections
 	docker compose up -d --wait
-	(cd src/api && yarn install --frozen-lockfile --network-timeout 1000000000)
-#	(cd src/api && yarn seed)
-#   (cd src/api && yarn install --frozen-lockfile --network-timeout 1000000000 && yarn seed)
+	(cd src/api && yarn install --frozen-lockfile --network-timeout 1000000000 && yarn seed)
 
 # TODO add steps for frontend
 

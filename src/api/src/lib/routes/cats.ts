@@ -144,10 +144,13 @@ catsRoutes.put(
 // Upload cat object with images
 catsRoutes.post(
     '/add',
-    upload.fields([
-        { name: 'files', maxCount: 10 },
-        { name: 'title', maxCount: 1 },
-    ]),
+    [
+        bearerAuthentication,
+        upload.fields([
+            { name: 'files', maxCount: 10 },
+            { name: 'title', maxCount: 1 },
+        ]),
+    ],
     // TODO fix req type when using multer
     async (req: any, res: Response) => {
         try {

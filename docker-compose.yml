@@ -13,14 +13,14 @@ services:
             - "5432:5432"
         networks:
             backend:
-    # INFO - we can add restart option if needed
-    #    restart: unless-stopped
-    # INFO - we can add extra confiog for healt checks, etc
-    #    healthcheck:
-    #        test: ["CMD-SHELL", "pg_isready -U cat_admin"]
-    #        interval: 10s
-    #        timeout: 5s
-    #        retries: 5
+        # INFO - we can add restart option if needed
+        #    restart: unless-stopped
+        # INFO - we can add extra confiog for healt checks, etc
+        healthcheck:
+            test: ["CMD-SHELL", "pg_isready -U cat_admin"]
+            interval: 10s
+            timeout: 5s
+            retries: 5
 
     # INFO - as development ENV works better on local OS I commented out the docker config for the backend and frontend
     # This could be enabled to have app working fully as containerized app

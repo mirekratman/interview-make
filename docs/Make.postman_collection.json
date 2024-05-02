@@ -56,7 +56,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE3MTMzNzAyMjgsImV4cCI6MTc0NDkwNjIyOH0.Xts90duNCc7fRJTDBs1tWAtPtQGus9vqsYUZ37t-OOs",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRlc3QiLCJpYXQiOjE3MTM0MDg0NjMsImV4cCI6MTc0NDk0NDQ2M30.sA7NaayP0EMc1x8wJoVRXDwNaGvuEB5oLBQvtXR3kK0",
 							"type": "string"
 						}
 					]
@@ -122,8 +122,8 @@
 							"key": "files",
 							"type": "file",
 							"src": [
-								"/Users/miro/_www/make/cat-of-the-day-mirekratman/docs/cat1.jpeg",
-								"/Users/miro/_www/make/cat-of-the-day-mirekratman/docs/cat2.jpg"
+								"/Users/miro/_www/make/cat-of-the-day-mirekratman/docs/cat2.jpg",
+								"/Users/miro/_www/make/cat-of-the-day-mirekratman/docs/cat1.jpeg"
 							]
 						},
 						{
@@ -140,7 +140,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/cats/upload",
+					"raw": "http://localhost:5000/api/cats/add",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -149,7 +149,7 @@
 					"path": [
 						"api",
 						"cats",
-						"upload"
+						"add"
 					]
 				}
 			},
