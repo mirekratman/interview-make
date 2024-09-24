@@ -130,6 +130,17 @@ ToDo
 
 -   Your opinion ;)
 
+## 23.04.2024
+
+Done
+
+-   small code cleaning - I noticied few FE files were duplicated in 2 locations
+-   partialy solved issue with SQL seed. More info inder
+
+In progress
+
+-   setup build the way it will count with postgres container issue
+
 # Usage
 
 ## Local development
@@ -162,10 +173,20 @@ Additionally:
 -   some example of deployment to versem is provided in Makefile
 -   I'm struggling with "Connection terminated unexpectedly" when it comes to SQL seeding. Still trying to resolve it but the functionality is correct. More info in code.
 
+SQL seeding issue
+
+The problem lies in a container when it initializes. It initialize DB and shut it down and reinitialize. See logs:
+2024-04-23 18:37:15 cat-db | 2024-04-23 16:37:15.547 UTC [1] LOG: listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+2024-04-23 18:37:15 cat-db | 2024-04-23 16:37:15.565 UTC [165] LOG: database system was shut down at 2024-04-23 16:37:15 UTC
+2024-04-23 18:37:15 cat-db | 2024-04-23 16:37:15.592 UTC [1] LOG: database system is ready to accept connections
+The solution is to handle this by double check DB status (probably a mixture of docker config depends_on/condition/healthcheck with some commandline code to call db)
+As for the LOCAL development API is run without container we can't setup easily dependency in docker compose but for PROD env we could make this dependency avoiding this "unknown" status of DB before seed.
+
 ### Starting local dev
 
 ```
 make
+cd src/api && yarn seed - temporary to solve DB issue mentioned above
 ```
 
 You can call some methods separately using for example:

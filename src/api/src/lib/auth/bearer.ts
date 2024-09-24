@@ -36,6 +36,7 @@ const bearerAuthentication = (
             }
 
             // INFO - We can add here extra logic for decoded object
+            // INFO - console log only for test purposes
             console.log(decoded);
 
             next();

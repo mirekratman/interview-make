@@ -3,8 +3,8 @@
     "version": "0.1.0",
     "license": "© Copyright Miroslaw Ratman 2024, all rights reserved",
     "scripts": {
-        "seed": "ts-node -r dotenv/config --require tsconfig-paths/register seed/index.ts dotenv_config_path=./.env",
-        "dev": "nodemon --exec 'NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register' src/index.ts",
+        "seed": "ts-node -r dotenv/config --require tsconfig-paths/register seed/index dotenv_config_path=./.env",
+        "dev": "nodemon --exec 'NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register' src/index",
         "build": "NODE_ENV=production tsc --build",
         "test": "jest --forceExit",
         "lint": "eslint",
@@ -28,7 +28,7 @@
         "jsonwebtoken": "^9.0.2",
         "multer": "^1.4.5-lts.1",
         "node-json-db": "^2.3.0",
-        "pg": "^8.11.5",
+        "pg": "8.11.1",
         "uuid4": "^2.0.3"
     },
     "devDependencies": {
