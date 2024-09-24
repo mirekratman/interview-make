@@ -2,10 +2,9 @@
     "compilerOptions": {
         "target": "ES2018",
         "module": "commonjs",
-        "outDir": "../../dist/api",
-        "types": ["node"],
+        "outDir": "../../dist/shared",
         "paths": {
-            "*": ["./seed/*", "./src/*"]
+            "*": ["./src/*"]
         },
         "strict": true,
         "resolveJsonModule": true,
@@ -13,13 +12,6 @@
         "sourceMap": true,
         "removeComments": true
     },
-    "include": [
-        "seed/**/*.ts",
-        "src/**/*.ts",
-        "src/declarations.d.ts",
-        "seed/index.ts",
-        "seed/sql/sql.ts",
-        "seed/json/json.js"
-    ],
+    "include": ["src/**/*.ts"],
     "exclude": ["node_modules"]
 }
