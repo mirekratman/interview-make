@@ -1,21 +1,25 @@
 {
-	"name": "test-monolith",
-	"version": "0.1.0",
-	"scripts": {
-		"dev": "NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register src/index.ts",
-		"build": "NODE_ENV=production tsc --build"
-	},
-	"private": true,
-	"dependencies": {
-		"@types/express": "^4.17.13",
-		"@types/express-session": "^1.18.0",
-		"dotenv": "^16.4.5",
-		"express": "^4.19.2",
-		"express-session": "^1.18.0"
-	},
-	"devDependencies": {
-		"ts-node": "^10.9.2",
-		"tsconfig-paths": "^4.2.0",
-		"typescript": "^5.4.3"
-	}
+    "name": "test-monolith",
+    "version": "0.1.0",
+    "license": "UNLICENSED",
+    "scripts": {
+        "dev": "NODE_ENV=development ts-node -r dotenv/config --require tsconfig-paths/register src/index.ts",
+        "build": "NODE_ENV=production tsc --build",
+        "seed": "node -r dotenv/config seed/index dotenv_config_path=./.env"
+    },
+    "private": true,
+    "dependencies": {
+        "@types/express": "^4.17.13",
+        "@types/express-session": "^1.18.0",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "express-session": "^1.18.0",
+        "pg": "^8.11.5",
+        "pg-native": "^3.0.1"
+    },
+    "devDependencies": {
+        "ts-node": "^10.9.2",
+        "tsconfig-paths": "^4.2.0",
+        "typescript": "^5.4.3"
+    }
 }
